@@ -1,63 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RM Designs — Apps & Projects</title>
-  <meta name="description" content="RM Designs builds small, thoughtful mobile apps.">
-  <link rel="icon" href="assets/logo.png">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RM Designs — App Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="wrap header">
-    <div class="brand">
-      <img src="assets/logo.png" alt="Mini Memories logo">
-      <div>
-        <h1>RM Designs</h1>
-        <p class="tag">Small, thoughtful apps.</p>
-      </div>
+<header class="header--pastel">
+  <div class="topbar">
+    <a class="brand" href="index.html"><span>RM Designs</span></a>
+    <p class="tagline">✨ Little apps with a lot of heart ✨</p>
+  </div>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="apps/mini-memories.html">Mini Memories</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
     </div>
-    <nav class="nav">
-      <a href="#apps">Apps</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  </nav>
+</header>
 
-  <main class="wrap">
-    <section class="hero card">
-      <h2>Mini Memories</h2>
-      <p>Capture photos, notes, and milestones for every child. Organize in albums, mark favourites, and find memories fast with search.</p>
-      <div class="cta">
-        <!-- Byt # till din riktiga Play-länk när den finns -->
-        <a class="btn" href="#" target="_blank" rel="noopener">Get it on Google Play</a>
-        <a class="btn alt" href="#" target="_blank" rel="noopener">iOS coming soon</a>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Apps that feel calm, friendly, and useful</h1>
+        <p class="lead">Built by R&amp;M Group AB under the RM Designs brand.</p>
+        <div class="cta-row">
+          <a class="btn" href="apps/mini-memories.html">Explore Mini Memories</a>
+          <a class="btn ghost" href="about.html">Learn more about us</a>
+        </div>
       </div>
     </section>
 
-    <section id="apps" class="grid">
-      <article class="card">
-        <h3>Mini Memories</h3>
-        <p>Family memory keeper with profiles, albums, favourites, and search.</p>
-      </article>
-      <article class="card">
-        <h3>About</h3>
-        <p>We build small apps and iterate fast. This page will list all projects as they launch.</p>
-      </article>
-      <article class="card">
-        <h3>Support</h3>
-        <p>Email: <a href="mailto:support@rmdesigns.se">support@rmdesigns.se</a></p>
-      </article>
-    </section>
+<section class="hero card wrap">
+  <div class="wrap">
+    <img class="app-logo lg" src="assets/logo.png" alt="Mini Memories logo" />
+
+    <h1>Mini Memories</h1>
+    <p class="lead">
+     💛 For the moments you never want to lose 💛 <br> 
+      Because the smallest moments are the ones that matter most.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.malinpatriksson.mini_memories" target="_blank" rel="noopener">Get it on Google Play (test)</a>
+      <a class="btn ghost" href="#" aria-disabled="true">App Store (coming soon)</a>
+    </div>
+  </div>
+</section>
+
   </main>
 
-  <footer id="contact" class="wrap footer">
-    <p>© <span id="year"></span> RM Designs — All rights reserved.</p>
-    <p><a href="privacy.html">Privacy Policy</a> • <a href="mailto:support@rmdesigns.se">support@rmdesigns.se</a></p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> R&amp;M Group AB — RM Designs</p>
+    </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>

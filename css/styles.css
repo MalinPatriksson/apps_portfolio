@@ -1,24 +1,194 @@
+/* Base */
 :root{
-  --bg:#fffefc; --text:#222; --muted:#666; --card:#fff;
-  --primary:#6c63ff; --accent:#ffd166; --shadow:0 10px 30px rgba(0,0,0,.08)
+  --bg-grad-start:#FFF5F8;
+  --bg-grad-end:#F7FFFD;
+  --accent:#FFB6C1;
+  --mint:#B2F7EF;
+  --ink:#333;
+  --muted:#6b6b6b;
+  --card:#ffffff;
+  --ring: rgba(0,0,0,.06);
 }
+
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.6}
-.wrap{max-width:1040px;margin:0 auto;padding:20px}
-.header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:48px;height:48px;border-radius:12px}
-.brand h1{margin:0;font-size:22px}
-.tag{margin:0;color:var(--muted);font-size:14px}
-.nav a{color:var(--text);text-decoration:none;font-weight:600;margin-left:16px}
-.hero{background:linear-gradient(135deg,#fff0f3,#f3f8ff 60%,#f6ffe8);
-  border-radius:20px;padding:26px;box-shadow:var(--shadow)}
-.hero h2{margin-top:0}
-.cta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
-.btn{display:inline-block;background:var(--primary);color:#fff;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;box-shadow:var(--shadow)}
-.btn.alt{background:var(--accent);color:#1a1a1a}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:22px 0}
-.card{background:var(--card);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
-.footer{color:var(--muted);text-align:center;font-size:14px;margin:22px 0 40px}
-a{color:inherit}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background: linear-gradient(180deg,var(--bg-grad-start),var(--bg-grad-end));
+}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* ==== Pastel header (brand + tagline + chip row) ==== */
+.header--pastel{
+  background:#FFB6C1;                     /* pastel pink bar */
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.header--pastel .topbar{
+  max-width:1040px; margin:0 auto; padding:20px 20px 10px;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.header--pastel .brand{
+  font-family:'Poppins',sans-serif; font-weight:700; font-size:2.4rem;
+  color:#fff; text-decoration:none; letter-spacing:.2px;
+}
+.header--pastel .brand span{ font-style:italic; font-weight:500; }
+.header--pastel .tagline{
+  margin:6px 0 14px; color:#fff; font-size:1.05rem; font-weight:500;
+}
+
+/* chip nav row */
+.header--pastel .site-nav{
+  background:transparent;
+}
+.header--pastel .site-nav .wrap{
+  max-width:1040px; margin:0 auto; padding:8px 20px 18px;
+  display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap;
+}
+.header--pastel .nav-link{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 16px; background:#fff; border-radius:999px;
+  color:#333; text-decoration:none; font-weight:600;
+  box-shadow:0 3px 10px rgba(0,0,0,.08); transition:transform .15s ease, background .15s ease;
+  white-space:nowrap;
+}
+.header--pastel .nav-link:hover{ background:#B2F7EF; transform:translateY(-2px); }
+.header--pastel .nav-link.active{ background:#FFE3ED; }
+
+
+.brand{
+  display:inline-block;
+  font-weight:700;
+  font-size:28px;
+  letter-spacing:.2px;
+  padding:16px 0 6px;
+  color:#2d2333;
+  text-decoration:none;
+}
+.brand span{font-style:italic;font-weight:500}
+
+.slogan{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-weight:500;
+  text-align:center;
+}
+
+/* Primary nav (centered, pastel "chips") */
+.site-nav{
+  width:100%;
+  background:var(--accent);
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.05);
+}
+.site-nav .wrap{
+  display:flex;
+  flex-direction:row;         /* <— add this */
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  padding:8px 0;
+  flex-wrap:nowrap;
+}
+
+.nav-link{
+  display:flex; /* så texten centreras snyggt */
+  align-items:center;
+  justify-content:center;
+  padding:8px 16px;
+  background:#fff;
+  border-radius:22px;
+  color:#2f2f2f;
+  text-decoration:none;
+  font-weight:500;
+  box-shadow:0 2px 6px var(--ring);
+  transition:all .2s ease;
+  white-space:nowrap; /* så ordet inte bryts */
+}
+.nav-link:hover{
+  background:var(--mint);
+  box-shadow:0 4px 12px var(--ring);
+  transform:translateY(-2px);
+}
+.nav-link.active{
+  background:#ffe4ec;
+  font-weight:700;
+}
+
+/* Hero */
+.hero{padding:42px 0 28px;text-align:center}
+.hero .lead{color:var(--muted);margin:6px 0 16px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* Buttons */
+.btn{
+  display:inline-block;background:var(--mint);border-radius:28px;
+  padding:12px 22px;color:#233;font-weight:600;text-decoration:none;
+  box-shadow:0 3px 10px var(--ring);transition:transform .15s ease, background .15s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:#fff;border:1px solid #e8e8e8}
+
+/* Cards / document content */
+.card{
+  background:var(--card);border:1px solid #eee;border-radius:16px;
+  box-shadow:0 6px 20px var(--ring);padding:24px;margin:28px auto;
+}
+.meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+.divider{border:none;border-top:1px dashed #e6e6e6;margin:24px 0}
+.note{background:#fff8e1;border:1px solid #ffe082;padding:12px;border-radius:10px;color:#4e3b00}
+.kbd{background:#f4f4f6;border:1px solid #e6e6ea;border-radius:6px;padding:2px 6px}
+
+/* App teaser */
+.single-app{display:flex;gap:18px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.app-logo{width:56px;height:56px}
+.app-logo.lg {
+  width: 200px;
+  height: auto;
+}
+/* ===== Alternating feature blocks ===== */
+.features{display:flex;flex-direction:column;gap:22px}
+.feature{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:center;
+  background:var(--card);border:1px solid #eee;border-radius:16px;
+  box-shadow:0 6px 20px var(--ring);padding:16px 16px 16px 16px;
+}
+.feature.reverse{grid-template-columns:1fr 1.1fr}
+.feature img{width:100%;height:auto;border-radius:12px;box-shadow:0 3px 10px var(--ring)}
+.feature h3{margin:6px 0 6px}
+.feature p{margin:0;color:#555}
+
+@media (max-width:900px){
+  .feature,.feature.reverse{grid-template-columns:1fr}
+}
+
+/* Pastel panel wrapper */
+.pastel-panel{
+  background:#E0FFFF;
+  border-radius:16px;
+  box-shadow:0 6px 20px var(--ring);
+  padding:24px;
+  margin:28px auto 60px;
+}
+
+/* Grid that lays out the feature cards */
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:24px;
+  align-items:stretch;          /* make rows equal height */
+}
+
+/* Make each card fill the grid cell height */
+.feature{ height:100%; }         /* keep your existing .feature styles */
+@media (max-width:900px){
+  .feature-grid{ grid-template-columns:1fr; }
+}
+
+
+/* Footer */
+.site-footer{background:var(--accent);color:#fff;margin-top:40px;padding:16px 0;text-align:center}
+
+/* Links */
+.link{color:#0b66c3;text-decoration:none}
+.link:hover{text-decoration:underline}
