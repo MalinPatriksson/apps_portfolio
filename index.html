@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RM Designs — Apps & Projects</title>
+  <meta name="description" content="RM Designs builds small, thoughtful mobile apps.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Mini Memories logo">
+      <div>
+        <h1>RM Designs</h1>
+        <p class="tag">Small, thoughtful apps.</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#apps">Apps</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card">
+      <h2>Mini Memories</h2>
+      <p>Capture photos, notes, and milestones for every child. Organize in albums, mark favourites, and find memories fast with search.</p>
+      <div class="cta">
+        <!-- Byt # till din riktiga Play-länk när den finns -->
+        <a class="btn" href="#" target="_blank" rel="noopener">Get it on Google Play</a>
+        <a class="btn alt" href="#" target="_blank" rel="noopener">iOS coming soon</a>
+      </div>
+    </section>
+
+    <section id="apps" class="grid">
+      <article class="card">
+        <h3>Mini Memories</h3>
+        <p>Family memory keeper with profiles, albums, favourites, and search.</p>
+      </article>
+      <article class="card">
+        <h3>About</h3>
+        <p>We build small apps and iterate fast. This page will list all projects as they launch.</p>
+      </article>
+      <article class="card">
+        <h3>Support</h3>
+        <p>Email: <a href="mailto:support@rmdesigns.se">support@rmdesigns.se</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer id="contact" class="wrap footer">
+    <p>© <span id="year"></span> RM Designs — All rights reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> • <a href="mailto:support@rmdesigns.se">support@rmdesigns.se</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
