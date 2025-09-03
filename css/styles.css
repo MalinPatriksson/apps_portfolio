@@ -21,10 +21,21 @@ body{
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 
 /* ==== Pastel header (brand + tagline + chip row) ==== */
-.header--pastel{
-  background:#FFB6C1;                     /* pastel pink bar */
-  box-shadow:0 2px 6px rgba(0,0,0,.08);
+.header--pastel {
+background: linear-gradient(
+  to bottom,
+  #FFB6C1 0%,
+  #FFC0CB 30%,
+  #FFD1DC 65%,
+  #FFE4E1 100%
+);
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  position: sticky;  /* gör den “klistrig” */
+  top: 0;            /* sätter den mot toppen */
+  z-index: 1000;     /* så den ligger över innehållet */
 }
+
+
 .header--pastel .topbar{
   max-width:1040px; margin:0 auto; padding:20px 20px 10px;
   display:flex; flex-direction:column; align-items:center; text-align:center;
@@ -164,7 +175,14 @@ body{
 
 /* Pastel panel wrapper */
 .pastel-panel{
-  background:#E0FFFF;
+  background:#caf8d3;
+  border-radius:16px;
+  box-shadow:0 6px 20px var(--ring);
+  padding:24px;
+  margin:28px auto 60px;
+}
+.pastel-panel-pet{
+  background:#e4d2c0;
   border-radius:16px;
   box-shadow:0 6px 20px var(--ring);
   padding:24px;
@@ -192,3 +210,19 @@ body{
 /* Links */
 .link{color:#0b66c3;text-decoration:none}
 .link:hover{text-decoration:underline}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  margin-top: 10px;
+}
