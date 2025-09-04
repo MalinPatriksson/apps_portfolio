@@ -34,7 +34,7 @@ body {
 }
 
 /* ============================
-   Header
+   Header (RM Designs brand)
 ============================ */
 .header--pastel {
   background: linear-gradient(
@@ -118,7 +118,7 @@ body {
 }
 
 /* ============================
-   Hero
+   Hero Section
 ============================ */
 .hero {
   padding: 42px 0 28px;
@@ -137,14 +137,21 @@ body {
   flex-wrap: wrap;
 }
 
-/* Hero logo (big app logo) */
-.app-logo.lg {
-  width: 1000px;
+/* Hero logo (big app logo in hero) */
+.hero-logo {
+  width: 1000px; /* desktop */
   height: auto;
   max-width: 100%;
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+}
+
+/* ============================
+   App Logos (small icons)
+============================ */
+.app-logo {
+  width: 300px;
+  height: 300px;
 }
 
 /* ============================
@@ -191,7 +198,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 6px 20px var(--ring);
   padding: 16px;
-  height: 100%; /* fill grid height */
+  height: 100%;
 }
 
 .feature.reverse {
@@ -370,7 +377,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .app-logo.lg {
+  .hero-logo {
     width: 600px;
   }
 }
@@ -397,9 +404,7 @@ body {
     width: 100%;
   }
 
-  .app-logo.lg {
-    width: 100%;
-    max-width: 300px; 
+  .hero-logo {
+    max-width: 400px;
   }
 }
-
