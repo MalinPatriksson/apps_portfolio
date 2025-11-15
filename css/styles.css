@@ -223,8 +223,8 @@ body {
 /* ============================
    Panels
 ============================ */
-.pastel-panel {
-  background: #caf8d3;
+.pastel-panel-mini {
+  background: #9ae3ad;
   border-radius: 16px;
   box-shadow: 0 6px 20px var(--ring);
   padding: 24px;
@@ -232,7 +232,15 @@ body {
 }
 
 .pastel-panel-pet {
-  background: #e4d2c0;
+  background: #C2A28D;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--ring);
+  padding: 24px;
+  margin: 28px auto 60px;
+}
+
+.pastel-panel-spendly {
+  background: #fff5ab;
   border-radius: 16px;
   box-shadow: 0 6px 20px var(--ring);
   padding: 24px;
