@@ -102,7 +102,7 @@ body {
   display: none;
   align-items: center;
   gap: 10px;
-  margin: 6px auto 8px;
+  margin: 6px 20px 8px;
   padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.7);
@@ -111,6 +111,19 @@ body {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.header--pastel .nav-toggle:hover {
+  background: #e7fbf7;
+  border-color: rgba(178,247,239,0.9);
+  transform: translateY(-2px);
+}
+
+body.nav-open .header--pastel .nav-toggle {
+  background: #FFE3ED;
+  border-color: rgba(255,182,193,0.6);
+  box-shadow: 0 8px 18px rgba(255,182,193,0.28);
 }
 
 .header--pastel .nav-toggle-bars {
@@ -666,6 +679,19 @@ body.theme-haven {
     grid-template-columns: 1fr;
   }
 
+  .feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature.reverse img {
+    order: 1;
+  }
+
+  .feature.reverse div {
+    order: 2;
+  }
+
   .hero-logo {
     width: 600px;
   }
@@ -690,6 +716,7 @@ body.theme-haven {
 
   .header--pastel .nav-toggle {
     display: inline-flex;
+    align-self: flex-start;
   }
 
   .header--pastel .site-nav {
@@ -701,9 +728,23 @@ body.theme-haven {
   }
 
   .header--pastel .site-nav .wrap {
+    flex-direction: column;
+    align-items: stretch;
     justify-content: flex-start;
-    padding-left: 16px;
-    padding-right: 16px;
+    gap: 10px;
+    padding: 10px 16px 16px;
+  }
+
+  .header--pastel .nav-link,
+  .header--pastel .nav-group {
+    width: 100%;
+  }
+
+  .header--pastel .nav-menu {
+    position: static;
+    min-width: unset;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-top: 10px;
   }
 
   .header--pastel .nav-menu {

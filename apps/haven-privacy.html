@@ -118,10 +118,21 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const navToggle = document.querySelector('.nav-toggle');
     const siteNav = document.getElementById('site-nav');
+    const appGroup = document.querySelector('.nav-group');
+    const appTrigger = appGroup ? appGroup.querySelector('.nav-trigger') : null;
+    const shouldOpenApps = !!(appTrigger && appTrigger.classList.contains('active'));
+
+    if (shouldOpenApps && appGroup) {
+      appGroup.open = true;
+    }
+
     if (navToggle && siteNav) {
       navToggle.addEventListener('click', () => {
         const isOpen = document.body.classList.toggle('nav-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
+        if (isOpen && shouldOpenApps && appGroup) {
+          appGroup.open = true;
+        }
       });
     }
   </script>

@@ -17,21 +17,28 @@
     <p class="tagline">Calm, crafted apps by R&M Group AB</p>
   </div>
 
-    <nav class="site-nav" id="site-nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span class="nav-toggle-bars" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+    <span class="nav-toggle-label">Menu</span>
+  </button>
+
+<nav class="site-nav" id="site-nav">
     <div class="wrap">
       <a class="nav-link" href="../index.html">Home</a>
-    <details class="nav-group">
-      <summary class="nav-link nav-trigger active">Apps</summary>
-                  <div class="nav-menu">
-        <a class="nav-link" href="haven.html">Haven</a>
-        <a class="nav-link" href="spendly.html">Spendly</a>
-        <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
-        <a class="nav-link" href="mini-memories.html">Mini Memories</a>
-    </div>
-</details>
+      <details class="nav-group">
+        <summary class="nav-link nav-trigger active">Apps</summary>
+        <div class="nav-menu">
+          <a class="nav-link" href="haven.html">Haven</a>
+          <a class="nav-link active" href="spendly.html">Spendly</a>
+          <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
+          <a class="nav-link" href="mini-memories.html">Mini Memories</a>
+        </div>
+      </details>
       <a class="nav-link" href="../about.html">About</a>
       <a class="nav-link" href="../contact.html">Contact</a>
-</div>
+    </div>
   </nav>
 </header>
 
@@ -105,10 +112,21 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const navToggle = document.querySelector('.nav-toggle');
     const siteNav = document.getElementById('site-nav');
+    const appGroup = document.querySelector('.nav-group');
+    const appTrigger = appGroup ? appGroup.querySelector('.nav-trigger') : null;
+    const shouldOpenApps = !!(appTrigger && appTrigger.classList.contains('active'));
+
+    if (shouldOpenApps && appGroup) {
+      appGroup.open = true;
+    }
+
     if (navToggle && siteNav) {
       navToggle.addEventListener('click', () => {
         const isOpen = document.body.classList.toggle('nav-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
+        if (isOpen && shouldOpenApps && appGroup) {
+          appGroup.open = true;
+        }
       });
     }
   </script>
