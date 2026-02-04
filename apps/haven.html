@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haven — RM Designs</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/4.png">
+  <link rel="apple-touch-icon" href="../assets/4.png">
+</head>
+<body class="theme-haven">
+  <!-- Header -->
+<header class="header--pastel">
+  <div class="topbar">
+    <a class="brand" href="../index.html"> <span>RM Designs</span></a>
+    <span class="brand-sub">Haven</span>
+    <p class="tagline">Calm, crafted apps by R&amp;M Group AB</p>
+  </div>
+
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span class="nav-toggle-bars" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+    <span class="nav-toggle-label">Menu</span>
+  </button>
+
+  <nav class="site-nav" id="site-nav">
+    <div class="wrap">
+      <a class="nav-link" href="../index.html">Home</a>
+    <details class="nav-group">
+      <summary class="nav-link nav-trigger active">Apps</summary>
+      <div class="nav-menu">
+        <a class="nav-link" href="haven.html">Haven</a>
+        <a class="nav-link" href="spendly.html">Spendly</a>
+        <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
+        <a class="nav-link" href="mini-memories.html">Mini Memories</a>
+    </div>
+</details>
+      <a class="nav-link" href="../about.html">About</a>
+      <a class="nav-link" href="../contact.html">Contact</a>
+</div>
+  </nav>
+</header>
+
+
+  <!-- Main -->
+  <main>
+<section class="hero">
+  <div class="wrap">
+    <img 
+      class="hero-logo" 
+      src="../assets/haven/10.png" 
+      alt="Haven hero graphic" 
+    />
+    <p class="lead">Låt ensamheten få mindre plats: en trygg, varm zon för reflektion och små steg framåt.</p>
+    <div class="cta-row">
+      <a class="btn" href="#" target="_blank" rel="noopener">Google Play</a>
+      <a class="btn ghost" href="#" aria-disabled="true">App Store</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap feature-grid pastel-panel-haven">
+      <article class="feature">
+        <img src="../assets/haven/6.png" alt="Your personal companion for calm and focus">
+        <div>
+          <h3>Your personal companion for calm and focus</h3>
+          <p>Haven meets you gently from the very first moment. This is your personal space for focus, safety, and presence. An app that supports you when you need it and stays quiet when you do not. No pressure. No noise. Just the feeling that someone is there.</p>
+        </div>
+      </article>
+
+      <article class="feature reverse">
+        <div>
+          <h3>Your daily space to feel supported</h3>
+          <p>Haven is designed to be part of your everyday life. A soft layer of support that helps you find clarity, direction, and small moments of calm. You check in, receive a gentle nudge, and move through your day with a little more balance.</p>
+        </div>
+        <img src="../assets/haven/1.png" alt="Your daily space to feel supported">
+      </article>
+
+      <article class="feature">
+        <img src="../assets/haven/5.png" alt="Small steps. Real progress.">
+        <div>
+          <h3>Small steps. Real progress.</h3>
+          <p>Progress in Haven is built on what is realistic today. Small tasks, clear checklists, and gentle guidance help you build momentum without pressure. You do what you can and that is enough.</p>
+        </div>
+      </article>
+
+      <article class="feature reverse">
+        <div>
+          <h3>Support on your terms</h3>
+          <p>Haven’s reminders are designed to feel human. They support you throughout the day without interrupting or overwhelming you. You set the pace and Haven adapts to your rhythm, not the other way around.</p>
+        </div>
+        <img src="../assets/haven/2.png" alt="Support on your terms">
+      </article>
+
+      <article class="feature">
+        <img src="../assets/haven/3.png" alt="A space to talk things through">
+        <div>
+          <h3>A space to talk things through</h3>
+          <p>When your thoughts need somewhere to land, Haven is there. Ask for motivation, perspective, or simply write things out. It is a safe place to think out loud and be met with understanding.</p>
+        </div>
+      </article>
+
+      <article class="feature reverse">
+        <div>
+          <h3>Talk it through in your own way</h3>
+          <p>Conversations in Haven are calm, present, and free from judgment. Write however you want, whenever you need. No performance. No right or wrong words. Just space to be exactly where you are.</p>
+        </div>
+        <img src="../assets/haven/4.png" alt="Talk it through in your own way">
+      </article>
+    </section>
+
+    <section class="wrap card" style="text-align: center;">
+      <h2>Support & Policies</h2>
+      <p>Your data is yours. Read our policy or instructions anytime:</p>
+      <p>
+        <a class="link" href="./haven-privacy.html">Privacy Policy</a> ·
+        <a class="link" href="./haven-terms.html">Terms of Use</a> ·
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> R&amp;M Group AB — RM Designs</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
+</body>
+</html>

@@ -9,22 +9,29 @@
   <link rel="icon" type="image/png" sizes="512x512" href="../assets/4.png">
   <link rel="apple-touch-icon" href="../assets/4.png">
 </head>
-<body>
+<body class="theme-mini">
 <header class="header--pastel">
   <div class="topbar">
     <a class="brand" href="../index.html"> <span>RM Designs</span></a>
-    <p class="tagline">✨ Little apps with a lot of heart ✨</p>
+    <span class="brand-sub">Mini Memories</span>
+    <p class="tagline">Calm, crafted apps by R&M Group AB</p>
   </div>
 
-  <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
     <div class="wrap">
       <a class="nav-link" href="../index.html">Home</a>
-      <a class="nav-link" href="spendly.html">Spendly</a>
-      <a class="nav-link active" href="mini-memories.html">Mini Memories</a>
-      <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
+    <details class="nav-group">
+      <summary class="nav-link nav-trigger active">Apps</summary>
+                  <div class="nav-menu">
+        <a class="nav-link" href="haven.html">Haven</a>
+        <a class="nav-link" href="spendly.html">Spendly</a>
+        <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
+        <a class="nav-link" href="mini-memories.html">Mini Memories</a>
+    </div>
+</details>
       <a class="nav-link" href="../about.html">About</a>
       <a class="nav-link" href="../contact.html">Contact</a>
-    </div>
+</div>
   </nav>
 </header>
 
@@ -33,7 +40,7 @@
   <main>
     <section class="wrap doc card">
       <h1>Privacy Policy / Integritetspolicy</h1>
-      <p class="meta">Effective: 2025-08-17 • Developer: R&amp;M Group AB • Contact: <a href="mailto:info@rmdesign.se">info@rmdesign.se</a></p>
+      <p class="meta">Effective: 2025-08-17 • Developer: R&amp;M Group AB • Contact: <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a></p>
 
       <h2>English</h2>
       <p>This Privacy Policy applies to <strong>Mini Memories</strong>, developed by <strong>R&amp;M Group AB</strong>. Mini Memories is offered as a <strong>freemium</strong> service and provided “AS IS”.</p>
@@ -47,7 +54,7 @@
         <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Analytics</a></li>
       </ul>
       <h3>Retention & Deletion</h3>
-      <p>User-provided data is kept while you use the app and for a reasonable period thereafter. Auto-collected data may be stored up to 24 months. Deletion requests: <a href="mailto:info@rmdesign.se">info@rmdesign.se</a>.</p>
+      <p>User-provided data is kept while you use the app and for a reasonable period thereafter. Auto-collected data may be stored up to 24 months. Deletion requests: <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a>.</p>
       <h3>Children</h3>
       <p>Not directed to children under 13; we do not knowingly collect their personal data.</p>
       <h3>Security</h3>
@@ -69,7 +76,7 @@
         <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Analytics</a></li>
       </ul>
       <h3>Bevarande & radering</h3>
-      <p>Data sparas så länge du använder appen och en rimlig tid därefter. Automatisk insamlad data kan sparas upp till 24 månader. Begär radering: <a href="mailto:info@rmdesign.se">info@rmdesign.se</a>.</p>
+      <p>Data sparas så länge du använder appen och en rimlig tid därefter. Automatisk insamlad data kan sparas upp till 24 månader. Begär radering: <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a>.</p>
       <h3>Barn</h3>
       <p>Appen riktar sig inte till barn under 13, och vi samlar inte medvetet in deras personuppgifter.</p>
       <h3>Säkerhet</h3>
@@ -84,6 +91,16 @@
       <p>© <span id="year"></span> R&amp;M Group AB — RM Designs</p>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
 </body>
 </html>

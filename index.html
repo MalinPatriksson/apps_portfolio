@@ -9,22 +9,28 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/4.png">
   <link rel="apple-touch-icon" href="/assets/4.png">
 </head>
-<body>
+<body class="theme-home">
 <header class="header--pastel">
   <div class="topbar">
     <a class="brand" href="index.html"><span>RM Designs</span></a>
-    <p class="tagline">✨ Little apps with a lot of heart ✨</p>
+    <p class="tagline">Calm, crafted apps by R&M Group AB</p>
   </div>
 
-  <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
     <div class="wrap">
       <a class="nav-link active" href="index.html">Home</a>
-      <a class="nav-link" href="apps/spendly.html">Spendly</a>
-      <a class="nav-link" href="apps/mini-memories.html">Mini Memories</a>
-      <a class="nav-link" href="apps/pet-memories.html">Pet Memories+</a>
+    <details class="nav-group">
+      <summary class="nav-link nav-trigger">Apps</summary>
+                  <div class="nav-menu">
+        <a class="nav-link" href="apps/haven.html">Haven</a>
+        <a class="nav-link" href="apps/spendly.html">Spendly</a>
+        <a class="nav-link" href="apps/pet-memories.html">Pet Memories+</a>
+        <a class="nav-link" href="apps/mini-memories.html">Mini Memories</a>
+    </div>
+</details>
       <a class="nav-link" href="about.html">About</a>
       <a class="nav-link" href="contact.html">Contact</a>
-    </div>
+</div>
   </nav>
 </header>
 
@@ -34,62 +40,73 @@
       <div class="wrap">
         <h1>Apps that feel calm, friendly, and useful</h1>
         <p class="lead">Built by R&amp;M Group AB under the RM Designs brand.</p>
-        <div class="cta-row">
+                <div class="cta-row">
+          <a class="btn" href="apps/haven.html">Explore Haven</a>
           <a class="btn" href="apps/spendly.html">Explore Spendly</a>
-          <a class="btn" href="apps/mini-memories.html">Explore Mini Memories</a>
           <a class="btn" href="apps/pet-memories.html">Explore Pet Memories+</a>
+          <a class="btn" href="apps/mini-memories.html">Explore Mini Memories</a>
 
         </div>
       </div>
     </section>
 
-    <section class="hero card wrap">
+    <section class="hero card wrap card-haven">
   <div class="wrap">
-    <img class="app-logo" src="assets/spendly/logo.png" alt="Spendly logo" />
+    <img class="app-logo" src="assets/haven/logo.png" alt="Haven logo" />
 
-    <h1>Spendly</h1>
-<p class="lead">
-  ✨ For when your wallet needs a reality check ✨ <br>
-  Because we’ve all been there.
-</p>
+    <h1><a class="card-title-link" href="apps/haven.html">Haven</a></h1>
+  <p class="lead">
+    A quiet space for small resets, gentle routines, and calm focus.
+  </p>
 
     <div class="cta-row">
-      <a class="btn" href="#" target="_blank" rel="noopener">Google Play</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=se.rmdesigns.spendly.app&pcampaignid=web_share" target="_blank" rel="noopener">Google Play</a>
       <a class="btn ghost" href="#" aria-disabled="true">App Store</a>
     </div>
   </div>
 </section>
 
-<section class="hero card wrap">
+    <section class="hero card wrap card-spendly">
   <div class="wrap">
-    <img class="app-logo" src="assets/mini/logo.png" alt="Mini Memories logo" />
+    <img class="app-logo" src="assets/spendly/logo.png" alt="Spendly logo" />
 
-    <h1>Mini Memories</h1>
-    <p class="lead">
-     💛 For the moments you never want to lose 💛 <br> 
-      Because the smallest moments are the ones that matter most.
-    </p>
+    <h1><a class="card-title-link" href="apps/spendly.html">Spendly</a></h1>
+<p class="lead">Because we’ve all been there.
+</p>
 
     <div class="cta-row">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.malinpatriksson.mini_memories" target="_blank" rel="noopener">Google Play</a>
-      <a class="btn ghost" href="https://apps.apple.com/se/app/mini-memories/id6751232818" aria-disabled="true">App Store</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=se.rmdesigns.spendly.app&pcampaignid=web_share" target="_blank" rel="noopener">Google Play</a>
+      <a class="btn ghost" href="https://apps.apple.com/se/app/spendly/id6755186925" aria-disabled="true">App Store</a>
     </div>
   </div>
 </section>
 
-    <section class="hero card wrap">
+<section class="hero card wrap card-pet">
   <div class="wrap">
     <img class="app-logo" src="assets/pet/logo.png" alt="Pet Memories logo" />
 
-    <h1>Pet Memories</h1>
-  <p class="lead">
-    🐾 Memories of them live on in us 🐾 <br>
-    Because the bond with our pets is written in the heart, forever.
+    <h1><a class="card-title-link" href="apps/pet-memories.html">Pet Memories</a></h1>
+  <p class="lead">Because the bond with our pets is written in the heart, forever.
   </p>
 
     <div class="cta-row">
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.malinpatriksson.pet_memories&pcampaignid=web_share" target="_blank" rel="noopener">Google Play</a>
       <a class="btn ghost" href="https://apps.apple.com/se/app/pet-memories/id6751625532" aria-disabled="true">App Store</a>
+    </div>
+  </div>
+</section>
+
+<section class="hero card wrap card-mini">
+  <div class="wrap">
+    <img class="app-logo" src="assets/mini/logo.png" alt="Mini Memories logo" />
+
+    <h1><a class="card-title-link" href="apps/mini-memories.html">Mini Memories</a></h1>
+    <p class="lead">Because the smallest moments are the ones that matter most.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.malinpatriksson.mini_memories" target="_blank" rel="noopener">Google Play</a>
+      <a class="btn ghost" href="https://apps.apple.com/se/app/mini-memories/id6751232818" aria-disabled="true">App Store</a>
     </div>
   </div>
 </section>
@@ -101,6 +118,16 @@
       <p>© <span id="year"></span> R&amp;M Group AB — RM Designs</p>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
 </body>
 </html>

@@ -9,23 +9,30 @@
   <link rel="icon" type="image/png" sizes="512x512" href="../assets/4.png">
   <link rel="apple-touch-icon" href="../assets/4.png">
 </head>
-<body>
+<body class="theme-mini">
   <!-- Header -->
 <header class="header--pastel">
   <div class="topbar">
     <a class="brand" href="../index.html"> <span>RM Designs</span></a>
-    <p class="tagline">✨ Little apps with a lot of heart ✨</p>
+    <span class="brand-sub">Mini Memories</span>
+    <p class="tagline">Calm, crafted apps by R&M Group AB</p>
   </div>
 
-  <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
     <div class="wrap">
       <a class="nav-link" href="../index.html">Home</a>
-      <a class="nav-link" href="spendly.html">Spendly</a>
-      <a class="nav-link active" href="mini-memories.html">Mini Memories</a>
-      <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
+    <details class="nav-group">
+      <summary class="nav-link nav-trigger active">Apps</summary>
+                  <div class="nav-menu">
+        <a class="nav-link" href="haven.html">Haven</a>
+        <a class="nav-link" href="spendly.html">Spendly</a>
+        <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
+        <a class="nav-link" href="mini-memories.html">Mini Memories</a>
+    </div>
+</details>
       <a class="nav-link" href="../about.html">About</a>
       <a class="nav-link" href="../contact.html">Contact</a>
-    </div>
+</div>
   </nav>
 </header>
 
@@ -132,6 +139,16 @@
       <p>© <span id="year"></span> R&amp;M Group AB — RM Designs</p>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
 </body>
 </html>

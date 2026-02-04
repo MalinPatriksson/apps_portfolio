@@ -9,48 +9,80 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/4.png">
   <link rel="apple-touch-icon" href="/assets/4.png">
 </head>
-<body>
+<body class="theme-home">
 <header class="header--pastel">
   <div class="topbar">
     <a class="brand" href="index.html"><span>RM Designs</span></a>
-    <p class="tagline">✨ Little apps with a lot of heart ✨</p>
+    <span class="brand-sub">About</span>
+    <p class="tagline">Calm, crafted apps by R&M Group AB</p>
   </div>
 
-  <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
     <div class="wrap">
-      <a class="nav-link" href="index.html">Home</a>      
-      <a class="nav-link" href="apps/spendly.html">Spendly</a>
-      <a class="nav-link" href="apps/mini-memories.html">Mini Memories</a>
-      <a class="nav-link" href="apps/pet-memories.html">Pet Memories+</a>
+      <a class="nav-link" href="index.html">Home</a>
+    <details class="nav-group">
+      <summary class="nav-link nav-trigger">Apps</summary>
+                  <div class="nav-menu">
+        <a class="nav-link" href="apps/haven.html">Haven</a>
+        <a class="nav-link" href="apps/spendly.html">Spendly</a>
+        <a class="nav-link" href="apps/pet-memories.html">Pet Memories+</a>
+        <a class="nav-link" href="apps/mini-memories.html">Mini Memories</a>
+</div>
+</details>
       <a class="nav-link active" href="about.html">About</a>
       <a class="nav-link" href="contact.html">Contact</a>
-    </div>
+</div>
   </nav>
 </header>
 
 <main>
-  <section class="card wrap" style="text-align:left;">
-    <h2>About RM Designs</h2>
-    <p><strong>RM Designs</strong> is part of <strong>R&amp;M Group AB</strong>, a small Swedish studio creating family-friendly apps with a pastel aesthetic. Our focus is on clarity, warmth, and accessibility — apps that feel welcoming, safe and joyful to use.</p>
+  <section class="page-hero wrap">
+    <h1>About RM Designs</h1>
+    <p class="lead">A small Swedish studio building calm, friendly apps with warmth, clarity, and care.</p>
+  </section>
 
-    <p>We believe technology doesn’t have to be complicated or overwhelming. Our process is simple: design carefully, ship early, and improve continuously based on user feedback. Every step is about delivering features that truly help, in a polished and thoughtful way.</p>
+  <section class="wrap about-grid">
+    <article class="card about-main">
+      <h2>Who we are</h2>
+      <p><strong>RM Designs</strong> is part of <strong>R&amp;M Group AB</strong>. We create family-friendly apps with a soft, approachable aesthetic. Our focus is on clarity, warmth, and accessibility — apps that feel welcoming, safe and joyful to use.</p>
+      <p>We believe technology doesn’t have to be complicated or overwhelming. Our process is simple: design carefully, ship early, and improve continuously based on user feedback. Every step is about delivering features that truly help, in a polished and thoughtful way.</p>
 
-    <h3>Our apps</h3>
-    <p><em>Mini Memories</em> — a private space for families to collect and cherish the moments that matter most. From everyday joys to big milestones, Mini makes it easy to save, organise, and relive memories together.</p>
-    <p><em>Pet Memories</em> — built with the same spirit, but for the furry (or feathery) members of the family. A safe and loving space to keep track of every pawprint, cuddle, and chapter of your pet’s life.</p>
+      <h3>Our apps</h3>
+      <p><em>Haven</em> — a quiet space for small resets, gentle routines, and calm focus.</p>
+      <p><em>Spendly</em> — a friendly budgeting tool that helps you see where your money goes, without the stress.</p>
+      <p><em>Mini Memories</em> — a private space for families to collect and cherish the moments that matter most. From everyday joys to big milestones, Mini makes it easy to save, organise, and relive memories together.</p>
+      <p><em>Pet Memories</em> — built with the same spirit, but for the furry (or feathery) members of the family. A safe and loving space to keep track of every pawprint, cuddle, and chapter of your pet’s life.</p>
+    </article>
 
-    <h3>Principles</h3>
-    <ul>
-      <li><strong>Delight:</strong> Friendly visuals, soft pastels, and clear typography.</li>
-      <li><strong>Privacy:</strong> Transparent policies and full control over your data.</li>
-      <li><strong>Care:</strong> Features that genuinely support families and pet owners, delivered in small, meaningful steps.</li>
-    </ul>
+    <aside class="card about-aside">
+      <h3>Principles</h3>
+      <ul class="pill-list">
+        <li><strong>Delight</strong> Friendly visuals, soft pastels, and clear typography.</li>
+        <li><strong>Privacy</strong> Transparent policies and full control over your data.</li>
+        <li><strong>Care</strong> Features that genuinely support families and pet owners.</li>
+      </ul>
 
-    <h3>Company details</h3>
-    <p>RM Designs is operated by <strong>R&amp;M Group AB</strong>, Sweden.</p>
-    <p>Org.nr: <em>559493-2708</em><br>
-    Registered office: <em>Båstad, Sweden</em><br>
-    Email: <a href="mailto:[info@rmdesigns.se]">info@rmdesigns.se</a></p>
+      <h3>Company details</h3>
+      <p>RM Designs is operated by <strong>R&amp;M Group AB</strong>, Sweden.</p>
+      <p>Org.nr: <em>559493-2708</em><br>
+      Registered office: <em>Båstad, Sweden</em><br>
+      Email: <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a></p>
+    </aside>
+  </section>
+
+  <section class="wrap about-highlights">
+    <article class="highlight-card">
+      <h3>Design-led</h3>
+      <p>We prioritize intuitive flows, calm visuals, and friendly copy.</p>
+    </article>
+    <article class="highlight-card">
+      <h3>Family-first</h3>
+      <p>Apps that feel safe, gentle, and easy to use for all ages.</p>
+    </article>
+    <article class="highlight-card">
+      <h3>Thoughtful updates</h3>
+      <p>We ship improvements based on real feedback and real needs.</p>
+    </article>
   </section>
 </main>
 
@@ -59,6 +91,16 @@
     <p>© <span id="year"></span> R&amp;M Group AB — RM Designs</p>
   </div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
 </body>
 </html>
