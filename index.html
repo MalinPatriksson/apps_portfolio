@@ -131,20 +131,31 @@
     const siteNav = document.getElementById('site-nav');
     const appGroup = document.querySelector('.nav-group');
     const appTrigger = appGroup ? appGroup.querySelector('.nav-trigger') : null;
-    const shouldOpenApps = !!(appTrigger && appTrigger.classList.contains('active'));
 
-    if (shouldOpenApps && appGroup) {
-      appGroup.open = true;
-    }
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
     if (navToggle && siteNav) {
       navToggle.addEventListener('click', () => {
         const isOpen = document.body.classList.toggle('nav-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
-        if (isOpen && shouldOpenApps && appGroup) {
+        if (isOpen && appGroup && appTrigger && appTrigger.classList.contains('active')) {
           appGroup.open = true;
         }
       });
+    }
+
+    if (appGroup) {
+      const appLinks = appGroup.querySelectorAll('.nav-menu .nav-link');
+      appLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          appGroup.open = false;
+        });
+      });
+    }
+
+    // Keep dropdown closed on desktop by default; only open automatically on mobile when menu is opened.
+    if (appGroup && isMobile() && document.body.classList.contains('nav-open') && appTrigger && appTrigger.classList.contains('active')) {
+      appGroup.open = true;
     }
   </script>
 </body>
