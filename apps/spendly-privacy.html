@@ -17,20 +17,20 @@
     <p class="tagline">Calm, crafted apps by R&M Group AB</p>
   </div>
 
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
     <span class="nav-toggle-bars" aria-hidden="true">
       <span></span><span></span><span></span>
     </span>
     <span class="nav-toggle-label">Menu</span>
   </button>
 
-<nav class="site-nav" id="site-nav">
+  <nav class="site-nav" id="site-nav">
     <div class="wrap">
       <a class="nav-link" href="../index.html">Home</a>
       <details class="nav-group">
         <summary class="nav-link nav-trigger active">Apps</summary>
         <div class="nav-menu">
-          <a class="nav-link" href="haven.html">Haven</a>
+          <a class="nav-link" href="haven.html">Haven <span class="nav-soon">Coming soon</span></a>
           <a class="nav-link active" href="spendly.html">Spendly</a>
           <a class="nav-link" href="pet-memories.html">Pet Memories+</a>
           <a class="nav-link" href="mini-memories.html">Mini Memories</a>
@@ -45,61 +45,111 @@
   <main>
     <section class="wrap doc card">
       <h1>Privacy Policy / Integritetspolicy</h1>
-      <p class="meta">Effective: 2025-09-01 • Developer: R&amp;M Group AB • Contact: <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a></p>
+      <p class="meta">Effective date / Ikraftträdande: 2026-03-03 • Developer / Utvecklare: R&amp;M Group AB • Contact / Kontakt: <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a></p>
 
       <h2>English</h2>
-      <p>This Privacy Policy applies to <strong>Spendly</strong>, developed by <strong>R&amp;M Group AB</strong>. Spendly is offered as a <strong>free</strong> app and provided “AS IS”.</p>
+      <p>This Privacy Policy applies to <strong>Spendly</strong>, developed by <strong>R&amp;M Group AB</strong>. Spendly is provided "AS IS".</p>
 
-      <h3>Information Collection and Use</h3>
-      <p><strong>User Provided:</strong> Spendly does not require an account, and we do not collect personal information such as names, emails, or photos. All budgeting data you enter (income, expenses, notes) is stored locally on your device only.</p>
-      <p><strong>Automatically Collected:</strong> Limited technical data may be collected by third-party services, such as device type, general app usage, and crash logs. No precise or background location data is collected.</p>
-
-      <h3>Third-Party Services</h3>
-      <p>The app may use the following services for ads and analytics:</p>
+      <h3>Information We Collect</h3>
       <ul>
-        <li><a href="https://policies.google.com/privacy" rel="noopener">Google Play Services</a></li>
-        <li><a href="https://policies.google.com/privacy" rel="noopener">AdMob</a></li>
+        <li>Data you enter in the app: budget information such as incomes, expenses, categories, and notes.</li>
+        <li>Device/app data: limited technical and usage data (for example app interactions, device/app information, and crash/diagnostic events) via analytics tools.</li>
+        <li>Anonymous user identifier: Spendly uses anonymous Firebase Authentication to create a technical user ID for app functionality.</li>
       </ul>
 
-      <h3>Data Storage</h3>
-      <p>All personal budgeting data is stored locally on your device and never sent to us. Uninstalling the app removes all locally stored data.</p>
+      <h3>How Data Is Used</h3>
+      <ul>
+        <li>To provide core budgeting features.</li>
+        <li>To enable optional sharing/collaboration features.</li>
+        <li>To measure app usage and improve stability and functionality.</li>
+      </ul>
+
+      <h3>Where Data Is Stored</h3>
+      <ul>
+        <li>Local on your device: your personal budget data is stored locally.</li>
+        <li>Cloud (when sharing/collaboration is used): shared sheets and related metadata are stored in Firebase Cloud Firestore so invited users can access shared content.</li>
+        <li>Analytics data: event/usage data is processed through Firebase Analytics.</li>
+      </ul>
+
+      <h3>Third-Party Services</h3>
+      <p>Spendly may use:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" rel="noopener">Google Play Services</a></li>
+        <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Analytics</a></li>
+        <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Authentication (Anonymous)</a></li>
+        <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Cloud Firestore</a></li>
+      </ul>
+
+      <h3>Advertising</h3>
+      <p>Spendly does not use AdMob at this time.</p>
 
       <h3>Children</h3>
-      <p>Spendly is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+      <p>Spendly is not directed to children under 13, and we do not knowingly collect personal information from children.</p>
 
       <h3>Security</h3>
-      <p>Since all personal data remains on your device, you are responsible for securing your device. We implement reasonable technical measures, but no system is completely secure.</p>
+      <p>We use reasonable technical and organizational measures to protect data, but no method is 100% secure.</p>
 
-      <h3>Changes</h3>
-      <p>We may update this policy. Continued use of the app after changes means you accept the updated policy.</p>
+      <h3>Data Deletion</h3>
+      <ul>
+        <li>Local data can be removed by uninstalling the app.</li>
+        <li>For shared cloud data, contact us at <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a> to request deletion where applicable.</li>
+      </ul>
+
+      <h3>Changes to This Policy</h3>
+      <p>We may update this Privacy Policy. Continued use after updates means you accept the revised policy.</p>
 
       <hr class="divider" />
 
       <h2>Svenska</h2>
-      <p>Denna integritetspolicy gäller <strong>Spendly</strong>, utvecklad av <strong>R&amp;M Group AB</strong>. Appen erbjuds som <strong>gratis</strong> och tillhandahålls i befintligt skick.</p>
+      <p>Denna integritetspolicy gäller <strong>Spendly</strong>, utvecklad av <strong>R&amp;M Group AB</strong>. Appen tillhandahålls i befintligt skick.</p>
 
-      <h3>Insamling och användning</h3>
-      <p><strong>Användarinformation:</strong> Spendly kräver inget konto och samlar inte in personuppgifter såsom namn, e-post eller bilder. All budgetdata du lägger in (inkomster, utgifter) lagras endast lokalt på din enhet.</p>
-      <p><strong>Automatisk insamling:</strong> Begränsad teknisk information kan samlas in av tredjepartstjänster, såsom enhetstyp, appanvändning och krascher. Ingen exakt platsdata samlas in.</p>
-
-      <h3>Tredjepart</h3>
-      <p>Appen kan använda följande tjänster för annonser och analys:</p>
+      <h3>Vilken data vi samlar in</h3>
       <ul>
-        <li><a href="https://policies.google.com/privacy" rel="noopener">Google Play Services</a></li>
-        <li><a href="https://policies.google.com/privacy" rel="noopener">AdMob</a></li>
+        <li>Data du matar in i appen: budgetinformation som inkomster, utgifter, kategorier och anteckningar.</li>
+        <li>Enhets-/appdata: begränsad teknisk data och användningsdata (t.ex. apphändelser, enhets-/appinformation och krasch-/diagnostikdata) via analystjänster.</li>
+        <li>Anonymt användar-ID: Spendly använder anonym Firebase Authentication för att skapa ett tekniskt användar-ID för appfunktionalitet.</li>
       </ul>
 
-      <h3>Lagring av data</h3>
-      <p>All personlig budgetdata lagras lokalt på din enhet och skickas aldrig till oss. Om du avinstallerar appen tas all lagrad data bort.</p>
+      <h3>Hur data används</h3>
+      <ul>
+        <li>För att tillhandahålla appens budgetfunktioner.</li>
+        <li>För att möjliggöra valfria delnings-/samarbetsfunktioner.</li>
+        <li>För att analysera användning och förbättra stabilitet och funktion.</li>
+      </ul>
+
+      <h3>Var data lagras</h3>
+      <ul>
+        <li>Lokalt på din enhet: din personliga budgetdata lagras lokalt.</li>
+        <li>Molnet (vid delning/samarbete): delade ark och relaterad metadata lagras i Firebase Cloud Firestore så att inbjudna användare kan komma åt delat innehåll.</li>
+        <li>Analytics-data: händelse- och användningsdata behandlas via Firebase Analytics.</li>
+      </ul>
+
+      <h3>Tredjepartstjänster</h3>
+      <p>Spendly kan använda:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" rel="noopener">Google Play Services</a></li>
+        <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Analytics</a></li>
+        <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Authentication (anonym inloggning)</a></li>
+        <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Cloud Firestore</a></li>
+      </ul>
+
+      <h3>Annonser</h3>
+      <p>Spendly använder inte AdMob för närvarande.</p>
 
       <h3>Barn</h3>
-      <p>Spendly riktar sig inte till barn under 13 år, och vi samlar inte medvetet in personuppgifter från barn.</p>
+      <p>Spendly riktar sig inte till barn under 13 år och vi samlar inte medvetet in personuppgifter från barn.</p>
 
       <h3>Säkerhet</h3>
-      <p>Eftersom all data lagras på din enhet ansvarar du själv för att skydda den. Vi vidtar rimliga åtgärder, men inget system är 100% säkert.</p>
+      <p>Vi vidtar rimliga tekniska och organisatoriska säkerhetsåtgärder, men inget system är helt säkert.</p>
+
+      <h3>Radering av data</h3>
+      <ul>
+        <li>Lokal data kan tas bort genom att avinstallera appen.</li>
+        <li>För delad molndata kan du kontakta oss på <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a> för begäran om radering där det är tillämpligt.</li>
+      </ul>
 
       <h3>Ändringar</h3>
-      <p>Policyn kan uppdateras; fortsatt användning innebär att du godkänner ändringarna.</p>
+      <p>Vi kan uppdatera policyn. Fortsatt användning efter uppdatering innebär att du accepterar den reviderade policyn.</p>
     </section>
   </main>
 

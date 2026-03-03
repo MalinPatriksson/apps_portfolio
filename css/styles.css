@@ -191,6 +191,20 @@ body.nav-open .header--pastel .nav-toggle {
   box-shadow: 0 8px 18px rgba(255,182,193,0.28);
 }
 
+.header--pastel .nav-soon {
+  margin-left: 8px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4eff9 100%);
+  border: 1px solid rgba(106, 91, 122, 0.28);
+  color: #5f4f73;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
 /* Theme variants for app pages */
 body.theme-spendly {
   --header-bg:
@@ -292,6 +306,29 @@ body.theme-haven {
 .hero .lead {
   color: var(--muted);
   margin: 6px 0 16px;
+}
+
+.status-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(106, 91, 122, 0.28);
+  background: linear-gradient(180deg, #ffffff 0%, #f4eff9 100%);
+  color: #5f4f73;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(106, 91, 122, 0.16);
+}
+
+.status-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
 }
 
 .cta-row {
