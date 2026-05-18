@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Align Delete Data — RM Designs</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/align/icon.png">
+  <link rel="apple-touch-icon" href="../assets/align/icon.png">
+</head>
+<body class="theme-align">
+<header class="header--pastel">
+  <div class="topbar">
+    <a class="brand" href="../index.html"> <span>RM Designs</span></a>
+    <span class="brand-sub">Align</span>
+    <p class="tagline">Calm, crafted apps by R&amp;M Group AB</p>
+  </div>
+
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span class="nav-toggle-bars" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+    <span class="nav-toggle-label">Menu</span>
+  </button>
+
+  <nav class="site-nav" id="site-nav">
+    <div class="wrap">
+      <a class="nav-link" href="../index.html">Home</a>
+      <details class="nav-group">
+        <summary class="nav-link nav-trigger active">Apps</summary>
+        <div class="nav-menu">
+          <a class="nav-link active nav-app-align" href="align.html">Align</a>
+          <a class="nav-link nav-app-haven" href="haven.html">Haven <span class="nav-soon">Coming soon</span></a>
+          <a class="nav-link nav-app-spendly" href="spendly.html">Spendly</a>
+          <a class="nav-link nav-app-pet" href="pet-memories.html">Pet Memories+</a>
+          <a class="nav-link nav-app-mini" href="mini-memories.html">Mini Memories</a>
+        </div>
+      </details>
+      <a class="nav-link" href="../about.html">About</a>
+      <a class="nav-link" href="../contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <section class="wrap doc card">
+      <h1>Delete Data / Radera data – Align</h1>
+      <p class="meta">Last updated / Senast uppdaterad: 2026-05-16 • Developer / Utvecklare: R&amp;M Group AB • Contact / Kontakt: <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a></p>
+
+      <h2>English</h2>
+      <p>This page explains how to delete specific Align data without deleting the whole account.</p>
+      <p>You can request deletion of profile information, photos, onboarding answers, test answers, messages and other data connected to your account, unless we need to keep certain information for safety, fraud prevention, legal compliance or dispute handling.</p>
+      <ul>
+        <li>Profile text and preferences can be edited or replaced in the app.</li>
+        <li>Photos can be removed in the app where photo management is available, or by contacting us.</li>
+        <li>Reports and safety records may be retained as needed for security, abuse prevention or legal reasons.</li>
+        <li>Some technical logs, analytics events or aggregated data may be retained where they are no longer linked to an identifiable account or where needed for security, diagnostics or legal reasons.</li>
+      </ul>
+      <p>We may need to verify your identity before processing a deletion request. We aim to respond within 30 days where required by applicable law.</p>
+      <p>To request deletion of specific data, email <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a> from your registered email address with the subject <strong>Delete Align data</strong>.</p>
+
+      <hr class="divider" />
+
+      <h2>Svenska</h2>
+      <p>Här förklarar vi hur du kan radera specifik Align-data utan att radera hela kontot.</p>
+      <p>Du kan begära radering av profilinformation, bilder, onboarding-svar, testsvar, meddelanden och annan data kopplad till ditt konto, om vi inte behöver spara viss information för säkerhet, bedrägeriförebyggande, rättsliga skyldigheter eller tvister.</p>
+      <ul>
+        <li>Profiltext och preferenser kan ändras eller ersättas i appen.</li>
+        <li>Bilder kan tas bort i appen där bildhantering finns, eller genom att kontakta oss.</li>
+        <li>Rapporter och säkerhetsrelaterad information kan sparas när det behövs för säkerhet, missbruksförebyggande eller juridiska skäl.</li>
+        <li>Vissa tekniska loggar, analysdata eller aggregerad data kan sparas när de inte längre är kopplade till ett identifierbart konto eller när det behövs för säkerhet, felsökning eller juridiska skäl.</li>
+      </ul>
+      <p>Vi kan behöva verifiera din identitet innan vi hanterar en raderingsbegäran. Vi strävar efter att svara inom 30 dagar där tillämplig lag kräver det.</p>
+      <p>För att begära radering av specifik data, mejla <a href="mailto:info@rmdesigns.se">info@rmdesigns.se</a> från din registrerade e-postadress med ämnet <strong>Radera Align-data</strong>.</p>
+    </section>
+  </main>
+
+<footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> R&amp;M Group AB — RM Designs</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    const appGroup = document.querySelector('.nav-group');
+    const appTrigger = appGroup ? appGroup.querySelector('.nav-trigger') : null;
+
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        if (isOpen && appGroup && appTrigger && appTrigger.classList.contains('active')) {
+          appGroup.open = true;
+        }
+      });
+    }
+
+    if (appGroup) {
+      const appLinks = appGroup.querySelectorAll('.nav-menu .nav-link');
+      appLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          appGroup.open = false;
+        });
+      });
+    }
+
+    if (appGroup && isMobile() && document.body.classList.contains('nav-open') && appTrigger && appTrigger.classList.contains('active')) {
+      appGroup.open = true;
+    }
+  </script>
+</body>
+</html>

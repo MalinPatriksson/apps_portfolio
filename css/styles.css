@@ -239,6 +239,55 @@ body.theme-pet {
   --footer-text: #7a4a2f;
 }
 
+body.theme-align {
+  --bg-grad-start: #F5F8FF;
+  --bg-grad-end: #F3FFFC;
+  --accent: #5B8CFF;
+  --mint: #5ED3C6;
+  --ink: #172033;
+  --muted: #657085;
+  --card: #ffffff;
+  --ring: rgba(19, 32, 53, .08);
+  --header-bg:
+    radial-gradient(120% 120% at 18% 8%, rgba(91,140,255,0.22) 0%, rgba(91,140,255,0) 55%),
+    linear-gradient(180deg, #e9f0ff 0%, #e5f7f4 55%, #d8eee9 100%);
+  --header-shadow: 0 10px 16px rgba(19,32,53,.10);
+  --brand-color: #102038;
+  --tagline-color: rgba(16,32,56,0.68);
+  --footer-bg: #d8eee9;
+  --footer-text: #102038;
+}
+
+body.theme-align .header--pastel .nav-link.active {
+  background: rgba(94,211,198,0.24);
+  border-color: rgba(94,211,198,0.48);
+  box-shadow: 0 8px 18px rgba(94,211,198,0.18);
+  color: #102038;
+}
+
+body.theme-align .header--pastel .site-nav {
+  background: rgba(255,255,255,0.72);
+  border-color: rgba(19,32,53,0.06);
+}
+
+body.theme-align .header--pastel .nav-link,
+body.theme-align .header--pastel .nav-menu,
+body.theme-align .header--pastel .nav-toggle {
+  background: rgba(255,255,255,0.94);
+  border-color: rgba(255,255,255,0.76);
+  color: #102038;
+}
+
+body.theme-align .header--pastel .nav-link:hover,
+body.theme-align .header--pastel .nav-toggle:hover {
+  background: rgba(91,140,255,0.13);
+  border-color: rgba(91,140,255,0.34);
+}
+
+body.theme-align .header--pastel .nav-toggle-bars span {
+  background: #102038;
+}
+
 body.theme-haven {
   --header-bg:
     radial-gradient(120% 120% at 18% 8%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 55%),
@@ -295,6 +344,47 @@ body.theme-haven {
   justify-content: flex-start;
 }
 
+
+.header--pastel .nav-menu .nav-link.nav-app-align {
+  background: linear-gradient(135deg, #0b1220 0%, #17263a 68%, #123333 100%);
+  border-color: rgba(94,211,198,0.34);
+  color: #F5F7FB;
+}
+
+.header--pastel .nav-menu .nav-link[class*="nav-app-"].active {
+  border-color: rgba(255,176,198,0.92);
+  box-shadow: 0 0 0 1px rgba(255,176,198,0.46), 0 10px 22px rgba(255,176,198,0.2);
+}
+
+body.theme-align .header--pastel .nav-menu .nav-link.nav-app-align.active {
+  background: linear-gradient(135deg, #0b1220 0%, #17263a 68%, #123333 100%);
+  color: #F5F7FB;
+}
+
+.header--pastel .nav-menu .nav-link.nav-app-haven {
+  background: linear-gradient(135deg, #efe9ff 0%, #f6eef4 55%, #fde9d8 100%);
+  color: #6a5b7a;
+}
+
+.header--pastel .nav-menu .nav-link.nav-app-spendly {
+  background: linear-gradient(135deg, #e7f6f2 0%, #d6efe8 55%, #c4e7dd 100%);
+  color: #0b5a52;
+}
+
+.header--pastel .nav-menu .nav-link.nav-app-pet {
+  background: linear-gradient(135deg, #f7eadf 0%, #f0ddcd 55%, #e7cfb9 100%);
+  color: #7a4a2f;
+}
+
+.header--pastel .nav-menu .nav-link.nav-app-mini {
+  background: linear-gradient(135deg, #e8f7ff 0%, #dff3f6 45%, #f3f0d8 100%);
+  color: #2b5a7d;
+}
+
+.header--pastel .nav-menu .nav-link[class*="nav-app-"]:hover {
+  filter: brightness(1.03);
+}
+
 /* ============================
    Hero Section
 ============================ */
@@ -338,6 +428,7 @@ body.theme-haven {
   flex-wrap: wrap;
 }
 
+
 /* Hero logo (big app logo in hero) */
 .hero-logo {
   width: 1000px; /* desktop */
@@ -353,6 +444,62 @@ body.theme-haven {
 .app-logo {
   width: 300px;
   height: 300px;
+}
+
+
+.app-shortcuts {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.app-shortcut {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.88);
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.07);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.app-shortcut:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+
+.shortcut-align {
+  background: linear-gradient(135deg, #0b1220 0%, #17263a 68%, #123333 100%);
+  border-color: rgba(94,211,198,0.34);
+  color: #F5F7FB;
+}
+
+.shortcut-haven {
+  background: linear-gradient(135deg, #efe9ff 0%, #f6eef4 55%, #fde9d8 100%);
+  color: #6a5b7a;
+}
+
+.shortcut-spendly {
+  background: linear-gradient(135deg, #e7f6f2 0%, #d6efe8 55%, #c4e7dd 100%);
+  color: #0b5a52;
+}
+
+.shortcut-pet {
+  background: linear-gradient(135deg, #f7eadf 0%, #f0ddcd 55%, #e7cfb9 100%);
+  color: #7a4a2f;
+}
+
+.shortcut-mini {
+  background: linear-gradient(135deg, #e8f7ff 0%, #dff3f6 45%, #f3f0d8 100%);
+  color: #2b5a7d;
 }
 
 /* ============================
@@ -377,6 +524,17 @@ body.theme-haven {
 .btn.ghost {
   background: #fff;
   border: 1px solid #e8e8e8;
+}
+
+body.theme-align .hero .btn {
+  background: #B2F7EF;
+  color: #233;
+}
+
+body.theme-align .hero .btn.ghost {
+  background: #fff;
+  color: #233;
+  border-color: #e8e8e8;
 }
 
 /* ============================
@@ -463,6 +621,53 @@ body.theme-haven {
   box-shadow: 0 6px 20px var(--ring);
   padding: 24px;
   margin: 28px auto 60px;
+}
+
+.pastel-panel-align {
+  background:
+    radial-gradient(140% 140% at 12% 12%, rgba(91,140,255,0.18) 0%, rgba(91,140,255,0) 55%),
+    radial-gradient(120% 120% at 90% 90%, rgba(94,211,198,0.16) 0%, rgba(94,211,198,0) 55%),
+    linear-gradient(135deg, #0b1220 0%, #151c2a 52%, #1e2635 100%);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--ring);
+  padding: 24px;
+  margin: 28px auto 60px;
+}
+
+body.theme-align .feature,
+body.theme-align .card {
+  background: rgba(255,255,255,0.96);
+  border-color: rgba(19,32,53,0.08);
+  color: #172033;
+}
+
+body.theme-align .feature p,
+body.theme-align .hero .lead {
+  color: #657085;
+}
+
+.card.card-align {
+  background:
+    radial-gradient(130% 130% at 14% 10%, rgba(91,140,255,0.34) 0%, rgba(91,140,255,0) 54%),
+    radial-gradient(120% 120% at 88% 82%, rgba(94,211,198,0.28) 0%, rgba(94,211,198,0) 56%),
+    linear-gradient(135deg, #0b1220 0%, #111b31 44%, #17263a 68%, #123333 100%);
+  border-color: rgba(94,211,198,0.36);
+  color: #F5F7FB;
+}
+
+.card.card-align .lead {
+  color: #AAB3C2;
+}
+
+.card.card-align .btn {
+  background: #5ED3C6;
+  color: #08111f;
+}
+
+.card.card-align .btn.ghost {
+  background: rgba(255,255,255,0.08);
+  color: #F5F7FB;
+  border-color: rgba(255,255,255,0.16);
 }
 
 /* ============================

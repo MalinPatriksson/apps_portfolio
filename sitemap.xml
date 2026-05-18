@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://rmdesigns.se/</loc></url>
-  <url><loc>https://rmdesigns.se/privacy.html</loc></url>
+  <url><loc>https://rmdesigns.se/apps/align.html</loc></url>
+  <url><loc>https://rmdesigns.se/apps/align-privacy.html</loc></url>
+  <url><loc>https://rmdesigns.se/apps/align-terms.html</loc></url>
+  <url><loc>https://rmdesigns.se/apps/align-delete-data.html</loc></url>
+  <url><loc>https://rmdesigns.se/apps/align-delete-account.html</loc></url>
 </urlset>
